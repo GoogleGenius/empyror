@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+include = ["./empyror"]
+exclude = ["**/node_modules", "**/__pycache__"]
+pythonVersion = "3.10"
+typeCheckingMode = "strict"
+
+reportUnnecessaryTypeIgnoreComment = "error"
+reportMissingTypeStubs = "none"
+reportImportCycles = "none"
+reportIncompatibleMethodOverride = "none"
+reportOverlappingOverload = "none"
+reportIncompatibleVariableOverride = "none"
+reportUnknownMemberType = "warning"
+reportUntypedFunctionDecorator = "warning"
+reportOptionalMemberAccess = "warning"

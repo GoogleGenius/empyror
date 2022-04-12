@@ -1,0 +1,7 @@
+aiohttp
+aiosqlite
+hikari
+hikari-lightbulb
+hikari-miru
+python-dotenv
+uvloop; sys_platform != "win32"
