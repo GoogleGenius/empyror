@@ -1,7 +1,8 @@
 aiohttp
 aiosqlite
 hikari
-hikari-lightbulb
+hikari-tanchi
+hikari-tanjun
 hikari-miru
 python-dotenv
 uvloop; sys_platform != "win32"
