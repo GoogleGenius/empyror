@@ -7,12 +7,15 @@ component = tanjun.Component()
 
 
 @component.with_slash_command
-@tanchi.as_slash_command("id", default_to_ephemeral=True)
-async def id(ctx: tanjun.abc.Context) -> None:
-    """Responds with your user id"""
+@tanchi.as_slash_command(default_to_ephemeral=True)
+async def ping(
+    ctx: tanjun.abc.Context,
+    bot: hikari.GatewayBot = tanjun.inject(type=hikari.GatewayBot),
+) -> None:
+    """Responds with bot latency"""
     embed = hikari.Embed(
-        title="Id",
-        description=f"User id is: ```{ctx.author.id}```",
+        title="Ping",
+        description=f"Pong! `{round(bot.heartbeat_latency * 1000)}ms`",
     )
     await ctx.respond(embed)
 
