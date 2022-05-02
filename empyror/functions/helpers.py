@@ -19,6 +19,4 @@ def get_modules(path: str | Path) -> typing.Generator[Path, None, None]:
     if isinstance(path, str):
         path = Path(path)
 
-    modules = path.glob("**/[!_]*.py")
-
-    return modules
+    return path.glob("**/[!_]*.py")
