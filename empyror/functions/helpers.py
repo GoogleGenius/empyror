@@ -3,7 +3,7 @@ import typing
 from pathlib import Path
 
 
-def get_modules(path: str | Path) -> typing.Generator[Path, None, None]:
+def get_plugins(path: str | Path) -> typing.Generator[Path, None, None]:
     """Get the modules from a specified path
 
     Parameters
@@ -13,12 +13,10 @@ def get_modules(path: str | Path) -> typing.Generator[Path, None, None]:
 
     Returns
     -------
-    modules : typing.Generator[Path, None, None]
-        The paths of the modules
+    typing.Generator[Path, None, None]
+        The paths of the plugins
     """
     if isinstance(path, str):
         path = Path(path)
 
-    modules = path.rglob("[!_]*.py")
-
-    return modules
+    return path.rglob("[!_]*.py")

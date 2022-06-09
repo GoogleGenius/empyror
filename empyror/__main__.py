@@ -1,6 +1,6 @@
 import os
 
-from empyror import build_bot
+from empyror.bot import build_bot
 
 
 if __name__ == "__main__":
